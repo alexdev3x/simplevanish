@@ -17,7 +17,7 @@ use function array_search;
 use function in_array;
 use function strtolower;
 
-class vanish extends PluginBase {
+class simplevanish extends PluginBase {
     public const PREFIX = C::BLUE . "" . C::DARK_GRAY . "". C::RESET;
 
     public static $vanish = [];
