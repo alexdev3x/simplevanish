@@ -32,7 +32,7 @@ class simplevanish extends PluginBase {
         self::$main = $this;
         $this->getServer()->getPluginManager()->registerEvents(new EventListener(), $this);
         $this->getScheduler()->scheduleRepeatingTask(new vanishTask(), 20);
-        @mkdir($this->getDataFolder());
+       ($this->getDataFolder());
         $this->saveDefaultConfig();
     }
 
