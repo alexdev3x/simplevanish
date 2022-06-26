@@ -46,18 +46,18 @@ class simplevanish extends PluginBase {
 		case "vanish":
 		case "v":
 	        if(!$sender instanceof Player){
-                $sender->sendMessage(self::PREFIX . C::DARK_RED . "Dieser Command kann nur ingame genutzt werden!");
+                $sender->sendMessage(self::PREFIX . C::DARK_RED . "Unknown Error! Command is for Ingame only!");
                 return false;
 	        }
 
 	        if(!$sender->hasPermission("simplevanish.plugin.use")){
-		        $sender->sendMessage(self::PREFIX . C::DARK_RED . "§6SV: §4Deine Berechtigungen reichen nicht aus um dich unsichtbar zu machen!");
+		        $sender->sendMessage(self::PREFIX . C::DARK_RED . "You do not have enough permissions to make yourself invisible!");
                 return false;
 	        }
 
             if(!in_array($name, self::$vanish)){
                 self::$vanish[] = $name;
-		        $sender->sendMessage(self::PREFIX . C::GREEN . "§6SimpleVanish: §6Du hast den Vanish modus §aerfolgreich§6 betreten!");
+		        $sender->sendMessage(self::PREFIX . C::GREEN . "You joined the SimpleVanish mode!");
 		        $nameTag = $sender->getNameTag();
 		        self::$nametagg[$name] = $nameTag;
 		        $sender->setNameTag("§6Mod §7> $nameTag");
@@ -83,7 +83,7 @@ class simplevanish extends PluginBase {
                         $msg = str_replace("%name", "$name", $msg);
                         $this->getServer()->broadcastMessage($msg);
 		        }
-               	    $sender->sendMessage(self::PREFIX . C::. "§6SimpleVanish: §6Du hast den Vanish modus§a erfolgreich §6verlassen!");
+               	    $sender->sendMessage(self::PREFIX . C::. "You successfully left the SimpleVanish mode!");
             }
         }
         return true;
