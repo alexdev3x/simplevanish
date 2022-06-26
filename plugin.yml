@@ -9,7 +9,7 @@ version: "1.3.6 Beta"
 author: al3xdev
 commands:
   simplevanish:
-    description: werde unsichtbar by al3xdev 
+    description: For Staff only! 
     permission: simplevanish.plugin.use
     aliases:
     - v
